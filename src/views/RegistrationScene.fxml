@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="658.0" prefWidth="941.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegistrationSceneController">
+    <stylesheets>
+        <URL value="@/css/main.css" />
+    </stylesheets>
+   <children>
+      <HBox alignment="CENTER" prefHeight="658.0" prefWidth="941.0" spacing="20.0" style="-fx-background-color: #f7f7f7f7;">
+         <children>
+            <VBox prefHeight="654.0" prefWidth="395.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="362.0" text="Basic Information" underline="true">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="control-label" text="Tenant First Name" textFill="SLATEBLUE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="firstName" promptText="First Name" style="-fx-background-color: #ffffff;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label styleClass="control-label" text="Tenant Last Name" textFill="SLATEBLUE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lastName" layoutX="10.0" layoutY="98.0" promptText="Last Name" style="-fx-background-color: #ffffff;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Gender" />
+                  <Pane prefHeight="50.0" prefWidth="300.0">
+                     <children>
+                        <HBox layoutX="14.0" layoutY="9.0" spacing="30.0">
+                           <children>
+                              <RadioButton fx:id="male" mnemonicParsing="false" selected="true" text="Male">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="gender" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="female" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Label styleClass="control-label" text="Tenant Birth Day" textFill="SLATEBLUE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dob" prefHeight="27.0" prefWidth="248.0" promptText="Date of Birth" />
+                  <Label styleClass="control-label" text="Tenant Email" textFill="SLATEBLUE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="93.0" prefWidth="251.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="email" prefHeight="25.0" prefWidth="167.0" promptText="eg: john@email.com" style="-fx-background-color: #ffffff;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label styleClass="control-label" text="Tenant 9 digit TRN" textFill="SLATEBLUE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="trn" promptText="9 digit TRN" style="-fx-background-color: #ffffff;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Phone numbers" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="phone1" prefHeight="26.0" prefWidth="238.0" promptText="Primary #" style="-fx-background-color: #ffffff;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="phone2" promptText="Work # (Optional)" style="-fx-background-color: #ffffff;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="15.0" top="15.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="658.0" prefWidth="374.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="362.0" text="Address" underline="true">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="43.0" prefWidth="238.0" spacing="30.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label styleClass="control-label" text="Select contry" textFill="SLATEBLUE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="country" prefWidth="150.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label styleClass="control-label" text="Select city" textFill="SLATEBLUE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="city" prefWidth="150.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label styleClass="control-label" text="Select Parish" textFill="SLATEBLUE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="parish" prefHeight="41.0" prefWidth="98.0">
+                     <VBox.margin>
+                        <Insets top="-6.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <Label styleClass="control-label" text="Street Address" textFill="SLATEBLUE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="str1" layoutX="10.0" layoutY="98.0" promptText="Street Line " style="-fx-background-color: #ffffff;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label styleClass="control-label" text="Post Box" textFill="SLATEBLUE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="12.0" prefWidth="238.0" />
+                  <TextField fx:id="poBox" promptText="Po.Box" style="-fx-background-color: #ffffff;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <ImageView fx:id="photo" fitHeight="130.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/avatar.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ImageView>
+                        <Hyperlink contentDisplay="CENTER" onAction="#uploadImage" styleClass="control-label" text="Select profile photo" textFill="SLATEBLUE">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Hyperlink>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <Region prefHeight="43.0" prefWidth="238.0" />
+                  <HBox alignment="TOP_CENTER" spacing="20.0">
+                     <children>
+                        <Button id="validateAndRegister" fx:id="registerbtn" mnemonicParsing="false" onAction="#validateAndRegister" prefHeight="22.0" prefWidth="167.0" style="-fx-background-color: #f6f6f6;" text="Register" textFill="#f5f5f5">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fx:id="loader" fitHeight="20.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../images/35%20(1).gif" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="15.0" top="15.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/wests/Documents/NetBeansProjects/rentalSystem/src/entities/Login.java</file>
+            <file>file:/C:/Users/wests/Documents/NetBeansProjects/rentalSystem/src/controllers/MainPanelSceneController.java</file>
+            <file>file:/C:/Users/wests/Documents/NetBeansProjects/rentalSystem/src/controllers/RegistrationSceneController.java</file>
+            <file>file:/C:/Users/wests/Documents/NetBeansProjects/rentalSystem/src/Scenes/ChangeScene.java</file>
+            <file>file:/C:/Users/wests/Documents/NetBeansProjects/rentalSystem/src/operations/CrudOperations.java</file>
+            <file>file:/C:/Users/wests/Documents/NetBeansProjects/rentalSystem/src/entities/Tenant.java</file>
+            <file>file:/C:/Users/wests/Documents/NetBeansProjects/rentalSystem/src/operations/RegisterTenant.java</file>
+            <file>file:/C:/Users/wests/Documents/NetBeansProjects/rentalSystem/src/interfaces/ProgramFiles.java</file>
+            <file>file:/C:/Users/wests/Documents/NetBeansProjects/rentalSystem/src/entities/Landlord.java</file>
+            <file>file:/C:/Users/wests/Documents/NetBeansProjects/rentalSystem/src/Scenes/Test.java</file>
+        </group>
+    </open-files>
+</project-private>

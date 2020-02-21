@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="758.0" prefWidth="653.0" style="-fx-background-color: #ffffff;" styleClass="card" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginSceneController">
+      <stylesheets>
+        <URL value="@/css/main.css" />
+    </stylesheets>
+   <children>
+      <VBox fx:id="loginArea" layoutX="38.0" layoutY="245.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Label styleClass="control-label" text="Your Email" />
+            <TextField fx:id="email" prefHeight="37.0" prefWidth="217.0" promptText="eg: your@email">
+               <font>
+                  <Font size="24.0" />
+               </font></TextField>
+            <Label styleClass="control-label" text="Password" />
+            <PasswordField fx:id="password" prefHeight="4.0" prefWidth="180.0" promptText="*****">
+               <font>
+                  <Font size="24.0" />
+               </font></PasswordField>
+            <Region prefHeight="15.0" prefWidth="217.0" />
+            <HBox>
+               <children>
+                  <Button id="button-flat" fx:id="loginBtn" contentDisplay="RIGHT" focusTraversable="false" mnemonicParsing="false" onAction="#getLoginData" prefHeight="18.0" prefWidth="177.0" style="-fx-background-color: #f6f6f6;" styleClass="button-flat" text="Sign In">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="loader" fitHeight="20.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/35%20(1).gif" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </HBox>
+            <Label fx:id="success" textAlignment="RIGHT" />
+         </children>
+      </VBox>
+      <VBox fx:id="regArea" layoutX="316.0" layoutY="116.0">
+         <children>
+            <Label styleClass="card-title" text="Register New Lanlord">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <Label styleClass="control-label" text="First Name" />
+            <TextField fx:id="fname" promptText="eg: John">
+               <font>
+                  <Font size="24.0" />
+               </font></TextField>
+            <Label styleClass="control-label" text="Last Name" />
+            <TextField fx:id="lname" promptText="Your Last Name">
+               <font>
+                  <Font size="24.0" />
+               </font></TextField>
+            <VBox>
+               <children>
+                  <Label styleClass="control-label" text="Gender" />
+                  <HBox>
+                     <children>
+                        <RadioButton fx:id="lmale" mnemonicParsing="false" selected="true" text="Male">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gender" />
+                           </toggleGroup>
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="lfemale" mnemonicParsing="false" text="Female" toggleGroup="$gender">
+                           <font>
+                              <Font size="24.0" />
+                           </font></RadioButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label styleClass="control-label" text="Email" />
+            <TextField fx:id="landEmail" promptText="eg: your@email">
+               <font>
+                  <Font size="24.0" />
+               </font></TextField>
+            <Label styleClass="control-label" text="Password" />
+            <PasswordField fx:id="landPass" promptText="Create Password">
+               <font>
+                  <Font size="24.0" />
+               </font></PasswordField>
+            <Label styleClass="control-label" text="Confirm Password" />
+            <PasswordField fx:id="confirmPass" promptText="Re-type Password">
+               <font>
+                  <Font size="24.0" />
+               </font></PasswordField>
+            <Region prefHeight="15.0" prefWidth="217.0" />
+            <HBox>
+               <children>
+                  <Button fx:id="signUpBtn" mnemonicParsing="false" onAction="#signUp" prefHeight="6.0" prefWidth="191.0" style="-fx-background-color: #f6f6f6;" text="Sign Up">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="loader2" fitHeight="20.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/35%20(1).gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Separator layoutX="284.0" layoutY="167.0" orientation="VERTICAL" prefHeight="629.0" prefWidth="14.0" />
+      <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="115.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lock.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="77.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/3d8dbc5f-d9d6-4a39-9bd9-2cbceb8fa081.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="82.0" layoutY="117.0" prefHeight="55.0" prefWidth="133.0" styleClass="card-title" text="Sign In">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
